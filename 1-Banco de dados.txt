@@ -1,0 +1,38 @@
+O que seria um controller?
+E o cara responsavel por controlar o fluxo de dados da sua aplicação
+por exemplo se o usuario entra na sua rota
+/login, é o controlle responsavel sobre o que vai acontecer nessa rota.
+Tipo entrei na rota login o que vai acontecer, o controler sabe que tem que exibir
+o formulario de login.
+
+Conexão com Banco de dados
+-Criando Banco de dado no Mysql
+Para criar um Banco de dados precisa ir
+create newschema in the connectd server
+Nele voce coloca o nome do banco de dados
+-Criando tabelas
+Assim que voce abri seu banco de dados vai ter uma aba escrito Tables, clique com o botão direito
+e selecione Create tables
+Apartir da ai voce coloca um nome para sua table no caso Users.
+
+-Criando colunas:
+Assim que voce fez a tabela terá um campo escrito column Name
+nela voce adiciona os campos
+Primeiro o Id sempre vai ser INT, Primary Key, Não nulo e Auto-incremente
+Outra coluna
+email e vou colocar um atributo nele chamado Unique, significa que não vou permitir
+que outro usuario se cadastre com o mesmo e-mail.
+o e-mail é unico
+ele fica aasim
+NN UQ Default: '0'
+Coluna Password
+NN
+Coluna role:
+Cargo do usuario daquele sistema
+o ususario só pode vizualizar dados
+o supervisor só vizualizar relatório
+o ADM pode cadastrar 
+esse tipo de variçoes voce controla pelo 'role' por numeros
+
+
+
