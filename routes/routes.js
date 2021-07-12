@@ -6,5 +6,7 @@ var UserController = require("../controllers/UserController")
 
 router.get('/', HomeController.index);
 router.post('/user', UserController.create)
+router.get("/user", UserController.index) // Busca de usuarios
+router.get("/user/:id",UserController.findUser) // Busca de usuario especifico
 
 module.exports = router;
