@@ -35,6 +35,25 @@ class User{
 
     }
 
+    async findByEmail(email){
+
+        try{
+            var result = await knex.select(["id", "email", "role", "name"]).where({email:email}).table("users") //Select retorna com informaçoes que eu deixo aparecer
+            
+            if(result.length > 0){
+                return result[0]
+            }else{
+                return undefined
+            }
+            
+            
+        }catch(err){
+            console.log(err)
+            return undefined
+        }
+
+    }
+
     async new(email,password,name){
         // Inserção de Banco de dados
         try{
@@ -48,8 +67,7 @@ class User{
     // validação de e-mail, verificar se já existe no Banco de dados
     async findEmail(email){
         try{
-           var result =  await knex.select("*").from("users").where({email: email})
-           
+           var result =  await knex.select("*").from("users").where({email: email})           
            if(result.length > 0){
                return true
            }else{
